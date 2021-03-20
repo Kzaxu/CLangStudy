@@ -4,7 +4,11 @@ using namespace std;
 struct Phone
 {
     string name;
-    Phone(string b): name(b) {}
+    // int price;
+    Phone(string b)
+    {
+        this->name = b;
+    }
 };
 
 void ff(char *b)
@@ -15,9 +19,21 @@ void ff(char *b)
     }
 }
 
+int &add()
+{
+    int *a = new int(10);
+    return *a;
+}
+
+Phone *test()
+{
+    return new Phone("aaa");
+}
+
 int main()
-{   
-    string name = "asdadas";
-    Phone p("sadada");
-    Phone p1 = "sadadada";
+{
+    // Phone p1 = "sadadada", 3;
+    // test();
+    Phone *p = test();
+    cout << p->name << endl;
 }

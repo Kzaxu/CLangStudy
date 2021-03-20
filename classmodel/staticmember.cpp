@@ -29,6 +29,7 @@ void test()
     // 非静态成员必须先实例化后才能访问 报错：Person::comm();
     // 静态变量只有在类体外指定值 报错：int Person::p_mA = 10;
     Person::func(100);
+    
 }
 
 int main()
