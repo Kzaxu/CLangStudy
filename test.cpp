@@ -32,8 +32,7 @@ Phone *test()
 
 int main()
 {
-    // Phone p1 = "sadadada", 3;
-    // test();
-    Phone *p = test();
-    cout << p->name << endl;
+    int a = 6;
+    int b = 3;
+    cout << a+b;
 }
