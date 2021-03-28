@@ -34,5 +34,6 @@ int main()
 {
     int a = 6;
     int b = 3;
+    int c = 4;
     cout << a+b;
 }
