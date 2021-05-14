@@ -32,8 +32,6 @@ Phone *test()
 
 int main()
 {
-    int a = 6;
-    int b = 3;
-    int c = 4;
-    cout << a+b;
+    int *a = new int(3);
+    cout << a[0] <<endl;
 }
