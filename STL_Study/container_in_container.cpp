@@ -24,12 +24,20 @@ void test01()
     v.push_back(v3);
     v.push_back(v4);
 
-    for (vector<vector<int> >::iterator it = v.begin(); it != v.end(); ++it)
-    {
-        for (vector<int>::iterator vit = (*it).begin(); vit != (*it).end(); ++vit)
-            cout << *vit << " ";
-        cout << endl;
-    }
+    // for (vector<vector<int> >::iterator it = v.begin(); it != v.end(); ++it)
+    // {
+    //     for (vector<int>::iterator vit = (*it).begin(); vit != (*it).end(); ++vit)
+    //         cout << *vit << " ";
+    //     cout << endl;
+    // }
+
+    // for (auto x : v)
+    // {
+    //     for (auto y : x)
+    //         cout << y << " ";
+    //     cout << endl;
+    // }
+    cout << v[0][0];
 }
 
 int main()
