@@ -59,6 +59,11 @@ void test02()
     v1.insert(v1.begin(), 2, 1000);
     printVector(v1);
 
+    // 插入整个vector，类似于 extend
+    vector<int> v2{1,2,3};
+    v1.insert(v1.begin()+1, v2.begin(),v2.begin()+2);
+    printVector(v1);
+
     // 删除 参数也是迭代器
     v1.erase(v1.begin());
     printVector(v1);
@@ -127,5 +132,5 @@ void test05()
 
 int main()
 {
-    test05();
+    test02();
 }

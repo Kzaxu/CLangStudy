@@ -1,4 +1,4 @@
-#include "function.h"
+#include <iostream>
 using namespace std;
 
 struct Person
@@ -36,7 +36,7 @@ struct Person
     }
 };
 
-int main()
+void test01()
 {
     // 初始化类的几种方式
     // 1. 直接声明
@@ -44,7 +44,7 @@ int main()
     Person p2;
     Person p3(p1);
     // 2. 括号内什么都没有会被认为是函数
-    Person p4();
+    // Person p4();
     p1.getInfo();
     p2.getInfo();
     p3.getInfo();
@@ -62,4 +62,22 @@ int main()
     Person p8 = 10;
     // 拷贝构造的本质
     Person p9 = p1;
+}
+
+Person genPerson(string a, int b)
+{
+    Person p(a, b);
+    return p;
+}
+
+void test02()
+{
+    // 只会调用一次构造，RVO(return value optimal) 大多数编译器都会在返回值赋值时进行优化
+    // 如果不进行优化，会多调用一个拷贝，一次operator=。
+    Person p = genPerson("abc", 10);
+}
+
+int main()
+{
+    test02();
 }
