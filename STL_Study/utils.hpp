@@ -1,3 +1,5 @@
+#ifndef _UTILES_H_
+#define _UTILES_H_
 #include <vector>
 #include <iostream>
 
@@ -31,4 +33,4 @@ void printVec(const std::vector<T> &v)
     std::cout << std::endl;
 }
 
-
+#endif
